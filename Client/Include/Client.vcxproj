@@ -150,6 +150,7 @@
     <ClInclude Include="..\Header\CEnemy.h" />
     <ClInclude Include="..\Header\CEnemyMgr.h" />
     <ClInclude Include="..\Header\CImGui.h" />
+    <ClInclude Include="..\Header\CJS.h" />
     <ClInclude Include="..\Header\CLogo.h" />
     <ClInclude Include="..\Header\CMainApp.h" />
     <ClInclude Include="..\Header\CMonster.h" />
@@ -183,6 +184,7 @@
     <ClCompile Include="..\Code\CEnemy.cpp" />
     <ClCompile Include="..\Code\CEnemyMgr.cpp" />
     <ClCompile Include="..\Code\CImGui.cpp" />
+    <ClCompile Include="..\Code\CJS.cpp" />
     <ClCompile Include="..\Code\CLogo.cpp" />
     <ClCompile Include="..\Code\CMainApp.cpp" />
     <ClCompile Include="..\Code\CMonster.cpp" />
