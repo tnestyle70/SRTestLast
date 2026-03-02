@@ -115,7 +115,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>../Header;../../Base;../../Reference/Header;../../Reference/ImGui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../Header;../../Base;../../Reference/Header;../../Reference/ImGui;../Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
@@ -170,6 +170,7 @@
     <ClInclude Include="..\Header\imstb_rectpack.h" />
     <ClInclude Include="..\Header\imstb_textedit.h" />
     <ClInclude Include="..\Header\imstb_truetype.h" />
+    <ClInclude Include="..\Header\SkyBox.h" />
     <ClInclude Include="Client.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
@@ -218,6 +219,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\Code\SkyBox.cpp" />
     <ClCompile Include="..\Header\CRoomStage2.cpp" />
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="pch.cpp">
