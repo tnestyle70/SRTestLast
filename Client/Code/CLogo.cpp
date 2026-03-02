@@ -1,0 +1,119 @@
+#include "pch.h"
+#include "CLogo.h"
+#include "CBackGround.h"
+#include "CPlayer.h"
+#include "CMonster.h"
+#include "CProtoMgr.h"
+
+CLogo::CLogo(LPDIRECT3DDEVICE9 pGraphicDev)
+    : Engine::CScene(pGraphicDev)
+{
+}
+
+CLogo::~CLogo()
+{
+}
+
+HRESULT CLogo::Ready_Scene()
+{
+    if (FAILED(Ready_Prototype()))
+        return E_FAIL;
+
+    if (FAILED(Ready_Environment_Layer(L"Environment_Layer")))
+        return E_FAIL;
+
+    return S_OK;
+}
+
+_int CLogo::Update_Scene(const _float& fTimeDelta)
+{
+    _int iExit = Engine::CScene::Update_Scene(fTimeDelta);
+
+    return iExit;
+}
+
+void CLogo::LateUpdate_Scene(const _float& fTimeDelta)
+{
+    Engine::CScene::LateUpdate_Scene(fTimeDelta);
+}
+
+void CLogo::Render_Scene()
+{
+    Engine::CScene::Render_Scene();
+}
+
+HRESULT CLogo::Ready_Environment_Layer(const _tchar* pLayerTag)
+{
+    CLayer* pLayer = CLayer::Create();
+
+    if (nullptr == pLayer)
+        return E_FAIL;
+
+    // 오브젝트 추가
+    CGameObject* pGameObject = nullptr;
+
+    // back ground
+    //pGameObject = CBackGround::Create(m_pGraphicDev);
+
+    //if (nullptr == pGameObject)
+    //    return E_FAIL;
+
+    //if (FAILED(pLayer->Add_GameObject(L"BackGround", pGameObject)))
+    //    return E_FAIL;
+
+    //CPlayer 추가
+    CGameObject* pPlayer = CPlayer::Create(m_pGraphicDev);
+    if (nullptr == pPlayer)
+        return E_FAIL;
+    if (FAILED(pLayer->Add_GameObject(L"Player", pPlayer)))
+        return E_FAIL;
+    //CMonster 추가
+    CGameObject* pMonster = CMonster::Create(m_pGraphicDev);
+    if (nullptr == pMonster)
+        return E_FAIL;
+    CMonster* ppMonster = dynamic_cast<CMonster*>(pMonster);
+    ppMonster->Set_Player(pPlayer);
+    if (FAILED(pLayer->Add_GameObject(L"Monster", pMonster)))
+        return E_FAIL;
+
+    m_mapLayer.insert({ pLayerTag, pLayer });
+
+    return S_OK;
+}
+
+HRESULT CLogo::Ready_Prototype()
+{
+    //CTriCol의 prototype 준비, prototype은 component를 반환
+    if (FAILED(CProtoMgr::GetInstance()->Ready_Prototype(L"Proto_TriCol", Engine::CTriCol::Create(
+        m_pGraphicDev))))
+        return E_FAIL;
+    //CRcCol의 prototype 준비
+    if (FAILED(CProtoMgr::GetInstance()->Ready_Prototype(L"Proto_RcCol", Engine::CRcCol::Create(
+        m_pGraphicDev))))
+        return E_FAIL;
+    //CTransform의 prototype 준비
+    if (FAILED(CProtoMgr::GetInstance()->Ready_Prototype(L"Proto_Trans", Engine::CTransform::Create(
+        m_pGraphicDev))))
+        return E_FAIL;
+    
+    return S_OK;
+}
+
+CLogo* CLogo::Create(LPDIRECT3DDEVICE9 pGraphicDev)
+{
+    CLogo* pLogo = new CLogo(pGraphicDev);
+
+    if (FAILED(pLogo->Ready_Scene()))
+    {
+        Safe_Release(pLogo);
+        MSG_BOX("Logo Create Failed");
+        return nullptr;
+    }
+
+    return pLogo;
+}
+
+void CLogo::Free()
+{
+    CScene::Free();
+}
