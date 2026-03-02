@@ -76,8 +76,8 @@
     <Filter Include="02. GameObject\03. EnemyMgr\00. Enemy\00. WhiteSuit">
       <UniqueIdentifier>{e94b684e-38f0-4e63-aca3-4c1823446414}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02. GameObject\05. JS">
-      <UniqueIdentifier>{2a197b8a-e305-4b36-993a-47e739e71f61}</UniqueIdentifier>
+    <Filter Include="SkyBox">
+      <UniqueIdentifier>{6b217bed-7de3-406e-98bc-a89b35c8469d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -174,8 +174,8 @@
     <ClInclude Include="..\Header\CWhiteSuit.h">
       <Filter>02. GameObject\03. EnemyMgr\00. Enemy\00. WhiteSuit</Filter>
     </ClInclude>
-    <ClInclude Include="..\Header\CJS.h">
-      <Filter>02. GameObject\05. JS</Filter>
+    <ClInclude Include="..\Header\SkyBox.h">
+      <Filter>SkyBox</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -257,8 +257,8 @@
     <ClCompile Include="..\Code\CWhiteSuit.cpp">
       <Filter>02. GameObject\03. EnemyMgr\00. Enemy\00. WhiteSuit</Filter>
     </ClCompile>
-    <ClCompile Include="..\Code\CJS.cpp">
-      <Filter>02. GameObject\05. JS</Filter>
+    <ClCompile Include="..\Code\SkyBox.cpp">
+      <Filter>SkyBox</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
