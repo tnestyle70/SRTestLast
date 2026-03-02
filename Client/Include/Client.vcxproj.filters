@@ -79,6 +79,9 @@
     <Filter Include="02. GameObject\05. JS">
       <UniqueIdentifier>{2a197b8a-e305-4b36-993a-47e739e71f61}</UniqueIdentifier>
     </Filter>
+    <Filter Include="02. GameObject\06. BossMonster">
+      <UniqueIdentifier>{25bedd34-6557-4c18-bfa4-66e9e22abead}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -177,6 +180,9 @@
     <ClInclude Include="..\Header\CJS.h">
       <Filter>02. GameObject\05. JS</Filter>
     </ClInclude>
+    <ClInclude Include="..\Header\CBossMonster.h">
+      <Filter>02. GameObject\06. BossMonster</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -259,6 +265,9 @@
     </ClCompile>
     <ClCompile Include="..\Code\CJS.cpp">
       <Filter>02. GameObject\05. JS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Code\CBossMonster.cpp">
+      <Filter>02. GameObject\06. BossMonster</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

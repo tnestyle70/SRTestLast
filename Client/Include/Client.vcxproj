@@ -147,6 +147,7 @@
     <ClInclude Include="..\Header\CBackGround.h" />
     <ClInclude Include="..\Header\CBoss.h" />
     <ClInclude Include="..\Header\CBossBullet.h" />
+    <ClInclude Include="..\Header\CBossMonster.h" />
     <ClInclude Include="..\Header\CEnemy.h" />
     <ClInclude Include="..\Header\CEnemyMgr.h" />
     <ClInclude Include="..\Header\CImGui.h" />
@@ -181,6 +182,7 @@
     <ClCompile Include="..\Code\CBackGround.cpp" />
     <ClCompile Include="..\Code\CBoss.cpp" />
     <ClCompile Include="..\Code\CBossBullet.cpp" />
+    <ClCompile Include="..\Code\CBossMonster.cpp" />
     <ClCompile Include="..\Code\CEnemy.cpp" />
     <ClCompile Include="..\Code\CEnemyMgr.cpp" />
     <ClCompile Include="..\Code\CImGui.cpp" />
