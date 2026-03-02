@@ -88,6 +88,9 @@
     <Filter Include="03. Component\03. Collider\00. Collider">
       <UniqueIdentifier>{f2b61d63-dd64-4418-92f3-665da5dfc4a3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="03. Component\98. Texture">
+      <UniqueIdentifier>{10bd303a-298a-4534-990f-1ff28fd1077e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Code\CGraphicDev.cpp">
@@ -158,6 +161,9 @@
     </ClCompile>
     <ClCompile Include="..\Code\CCollisionMgr.cpp">
       <Filter>03. Component\03. Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Code\CCode.cpp">
+      <Filter>03. Component\98. Texture</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -247,6 +253,9 @@
     </ClInclude>
     <ClInclude Include="..\Header\CCollisionMgr.h">
       <Filter>03. Component\03. Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Header\CCode.h">
+      <Filter>03. Component\98. Texture</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
